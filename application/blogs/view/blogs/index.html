@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Blogs Ea</title>
+	<meta charset="utf-8">
+	<script type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css" href="">
+</head>
+<body>
+	<form action="http://47.97.111.255/index.php?s=/blogs/blogs/testData" method="post">
+		<table>
+			<tr>
+				<td>姓名</td>
+				<td><input type="text" name="name"></td>
+			</tr>
+			<tr>
+				<td>年龄</td>
+				<td><input type="text" name="age"></td>
+			</tr>
+			<tr>
+				<td>内容</td>
+				<td><input type="text" name="content"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="submit" value="提交"></td>
+			</tr>
+		</table>
+	</form>
+
+	<!-- 查询部分 -->
+	<table border=1>
+	<tr>
+		<th>ID</th>
+		<th>用户名</th>
+		<th>年龄</th>
+		<th>内容</th>
+	</tr>
+	{volist name="arr" id="vo"}
+	<tr>
+		<td>{$vo.id}</td>
+		<td>{$vo.name}</td>
+		<td>{$vo.age}</td>
+		<td>{$vo.content}</td>
+	</tr>
+	{/volist}
+	</table>
+</body>
+</html>
